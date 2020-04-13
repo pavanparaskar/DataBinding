@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Databaing mot work whwnerver not include <include> tag-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Addind Data veribles-->
+    <data>
+
+       <variable
+           name="grader"
+           type="com.example.databinding.StudetData" />
+        <variable
+            name="presenter"
+            type="com.example.databinding.MainActivityPresenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@={grader.student}"
+            android:textSize="30sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@={grader.grade}"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={grader.grade}"
+            android:id="@+id/editte"></EditText>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:onClick="@{()-> presenter.onShowData(grader)}"></Button>
+    </LinearLayout>
+
+</layout>
