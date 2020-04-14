@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         // Step 6 : Create MainActivitContract interface
         // Step 7 : Adding to code MainActivity and display into correct widget
 
-        // Step 8 : Lets run application
+        // Step 8 : Lets run application    
 
 
         ActivityMainBinding mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
